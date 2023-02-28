@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --site-Maincolor: #fcb72b;
+  --lightsite-textcolor: #fff;
+  --darksite-textcolor: #000;
+}
+
+/* General Css */
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body { 
+  width: 100%;
+  font-size: 16px;
+  background: #091921; 
+}
+
+img {
+  display: inline-block;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1400px;
+}
+
+/*=============================== Site Loader ========================= */
+
+.loader-box{
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #050c2a;
+}
+
+.lds-roller{
+  width: 80px;
+  height: 80px;
+  z-index: 999;
+  position: relative;
+  display: inline-block;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--site-Maincolor);
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*============================= Header site ============================= */
+
+.header__navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  background: #091921;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 1);
+}
+
+.header__logo {
+  display: flex;
+  user-select: none;
+}
+
+.header__logo-title {
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 2px;
+  padding: 12px 0px 0px 15px;
+  color: var(--site-Maincolor);
+  font-family: "Orbitron", sans-serif;
+}
+
+.header__navbar {
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-around;
+}
+
+.header__menu {
+  display: flex;
+}
+
+.header__menu-item {
+  font-weight: 800;
+  transition: 0.2s;
+  letter-spacing: 2px;
+  font-style: normal;
+  padding: 15px 0px 0px 42px;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* .header__menu-item:hover {
+  transition: 0.2s;
+  padding-top: 10px;
+} */
+
+.header__item-link {
+  color: var(--lightsite-textcolor);
+}
+
+.header__item-link:active {
+  color: var(--site-Maincolor);
+}
+
+/*=============== Analog Clock style ===============*/
+
+.site__main {
+  position: relative;
+  top: 150px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*=================== Uzbekistan Clock ===================*/
+
+.clockUzb {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  border-radius: 50%;
+  transition: 2s;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/seferblad.png),
+    radial-gradient(
+      circle,
+      rgb(37, 73, 90) 0%,
+      rgb(25, 48, 60) 11%,
+      rgba(9, 25, 33, 1) 38%
+    );
+  background-size: cover;
+}
+
+.clockUzb:hover {
+  transition: 2s;
+  box-shadow: 0 -8px 8px var(--site-Maincolor), inset 0 -15px 15px #191919,
+    0 8px 15px var(--site-Maincolor), inset 0 15px 15px #191919;
+}
+
+.clockUzb:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--lightsite-textcolor);
+  border-radius: 50%;
+  z-index: 888;
+}
+
+.clockUzb .clockUzb__hour,
+.clockUzb .clockUzb__minute,
+.clockUzb .clockUzb__second {
+  position: absolute;
+}
+
+.clockUzb .clockUzb__hour,
+.hourUzb {
+  width: 160px;
+  height: 160px;
+}
+.clockUzb .clockUzb__minute,
+.minuteUzb {
+  width: 190px;
+  height: 190px;
+}
+.clockUzb .clockUzb__second,
+.secondUzb {
+  width: 230px;
+  height: 230px;
+}
+
+.hourUzb,
+.minuteUzb,
+.secondUzb {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hourUzb:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background-color: #ffc600;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+.minuteUzb:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background-color: #fff;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+.secondUzb:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background-color: #fff;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
+
+/*=================== Russian Clock ===================*/
+
+.clockRussian__container {
+  padding-left: 100px;
+}
+
+.clockRussian {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  border-radius: 50%;
+  transition: 2s;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/seferblad.png),
+    radial-gradient(
+      circle,
+      rgb(37, 73, 90) 0%,
+      rgb(25, 48, 60) 11%,
+      rgba(9, 25, 33, 1) 38%
+    );
+  background-size: cover;
+}
+
+.clockRussian:hover {
+  transition: 2s;
+  box-shadow: 0 -8px 8px var(--site-Maincolor), inset 0 -15px 15px #191919,
+    0 8px 15px var(--site-Maincolor), inset 0 15px 15px #191919;
+}
+
+.clockRussian:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--lightsite-textcolor);
+  border-radius: 50%;
+  z-index: 888  ;
+}
+
+.clockRussian .clockRussian__hour,
+.clockRussian .clockRussian__minute,
+.clockRussian .clockRussian__second {
+  position: absolute;
+}
+
+.clockRussian .clockRussian__hour,
+.russianHour {
+  width: 160px;
+  height: 160px;
+}
+.clockRussian .clockRussian__minute,
+.russianMinute {
+  width: 190px;
+  height: 190px;
+}
+.clockRussian .clockRussian__second,
+.russianSecond {
+  width: 230px;
+  height: 230px;
+}
+
+.russianHour,
+.russianMinute,
+.russianSecond {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.russianHour:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background-color: #ffc600;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+.russianMinute:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background-color: #fff;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+.russianSecond:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background-color: #fff;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
+
+.Clock__title {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: "Orbitron", sans-serif;
+  color: var(--site-Maincolor);
+}
+
+.russianClock__title {
+  margin-top: 50px;
+  margin-left: 170px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: "Orbitron", sans-serif;
+  color: var(--site-Maincolor);
+}

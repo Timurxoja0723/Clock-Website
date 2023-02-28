@@ -1,0 +1,145 @@
+@media (max-width: 400px) {
+  :root {
+    --site-Maincolor: #fcb72b;
+    --lightsite-textcolor: #fff;
+    --darksite-textcolor: #000;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 800px;
+  }
+
+  .header__contaier {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #091921;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 1);
+  }
+
+  .header__logo {
+    display: flex;
+    left: 100px;
+    user-select: none;
+  }
+
+  .header__logo-title {
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 2px;
+    padding: 12px 0px 0px 15px;
+    color: var(--site-Maincolor);
+    font-family: "Orbitron", sans-serif;
+  }
+
+  .header__menu.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: -20px;
+    width: 400px;
+    height: 210px;
+    z-index: 997;
+    display: flex;
+    padding-top: 40px;
+    border-radius: 20px;
+    text-align: center;
+    flex-direction: column;
+    background: #091921;
+  }
+
+  .header__menu-btn {
+    position: relative;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    transition: 0.1s ease-in-out;
+    background-size: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/menu-btn.png);
+  }
+
+  .header__menu-btn.active {
+    width: 40px;
+    height: 40px;
+    z-index: 999;
+    transition: 0.1s ease-in-out;
+    background-size: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/close-menu-btn.png);
+  }
+
+  .header__navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__menu-item {
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-style: normal;
+    padding: 30px 0px 0px 42px;
+    font-family: "Orbitron", sans-serif;
+  }
+
+  .header__item-link:active {
+    /* transition: 0.5s; */
+    background: var(--site-Maincolor);
+  }
+
+  .main__container {
+    user-select: none;
+    position: relative;
+    top: 60px;
+    width: 350px;
+    height: 175px;
+    border-radius: 40px;
+    transition: 1s;
+    background-color: #13191c;
+  }
+
+  .main__container:hover {
+    transition: 1s;
+    box-shadow: 0px 4px 20px var(--site-Maincolor);
+  }
+
+  .watchclock {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    font-family: "Orbitron", sans-serif;
+    color: var(--site-Maincolor);
+  }
+
+  .main__animeted-text {
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 62px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    color: var(--site-Maincolor);
+  }
+
+  .main__animeted-text {
+    position: relative;
+    top: 40px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 30px;
+  }
+}

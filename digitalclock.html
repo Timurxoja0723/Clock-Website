@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--========== Site style links ==========-->
+  <link rel="stylesheet" href="./css/normaliz.css" />
+  <link rel="stylesheet" href="./css/digitalclock.css" />
+  <!--========== Site responsive link ==========-->
+  <link rel="stylesheet" href="./site-responsive/digitalclock.css" />
+  <!--=============== Font Awesome ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--========== Site title ==========-->
+  <link rel="icon" type="image/x-icon" href="./img/site-favicon.png" />
+  <title>Digital Clock</title>
+</head>
+
+<body>
+  <!--================== Site Loader ================== -->
+  <div class="loader-box">
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!--============= Site Header =============-->
+  <header class="site__header">
+    <div class="container header__contaier">
+      <nav class="header__navbar">
+        <a href="./digitalclock.html" class="header__logo">
+          <img src="./img/site-logo.png" alt="site-logo" class="header__logo-img" width="50" height="50" />
+          <h2 class="header__logo-title">Clocks</h2>
+        </a>
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="./index.html" class="header__item-link">Analog Clock</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="./digitalclock.html" class="header__item-link">Digitel Clock</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="./stopwatch.html" class="header__item-link">Stop watch</a>
+          </li>
+        </ul>
+        <div class="header__menu-btn"></div>
+      </nav>
+    </div>
+  </header>
+  <main class="site__main">
+    <section class="container main__container">
+      <div class="main__clock-box">
+        <div class="watchclock" id="clock"></div>
+      </div>
+      <div class="main__animeted-text">
+        <h3>Hyper Text Marcup Language</h3>
+        <h3>Cascading Style Sheets</h3>
+        <h3>Java Script</h3>
+      </div>
+    </section>
+  </main>
+  <script src="./javaScript/digitalclock.js"></script>
+  <script src="./javaScript/loader.js"></script>
+
+</body>
+
+</html>

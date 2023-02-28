@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&display=swap");
+
+:root {
+  --site-Maincolor: #fcb72b;
+  --lightsite-textcolor: #fff;
+  --darksite-textcolor: #000;
+}
+
+/* General Css */
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #091921;
+  font-size: 16px;
+}
+
+img {
+  display: inline-block;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1400px;
+}
+
+.site__btn {
+  font-size: 20px;
+  transition: 1s;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border: 1px hidden #091921;
+  font-family: "Orbitron", sans-serif;
+  color: var(--darksite-textcolor);
+}
+
+.site__btn:hover {
+  transition: 1s;
+  color: var(--site-Maincolor);
+  background: var(--lightsite-textcolor);
+  box-shadow: 0px 4px 20px var(--site-Maincolor);
+}
+/*=============================== Site Loader ========================= */
+
+.loader-box{
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #050c2a;
+}
+
+.lds-roller{
+  width: 80px;
+  height: 80px;
+  z-index: 999;
+  position: relative;
+  display: inline-block;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--site-Maincolor);
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*============================= Header site =============================*/
+
+.header__contaier {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #091921;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 1);
+}
+
+.header__logo {
+  display: flex;
+  user-select: none;
+}
+
+.header__logo-title {
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 2px;
+  padding: 12px 0px 0px 15px;
+  color: var(--site-Maincolor);
+  font-family: "Orbitron", sans-serif;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.header__navbar {
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-around;
+}
+
+.header__menu {
+  display: flex;
+}
+
+.header__menu-item {
+  font-weight: 800;
+  transition: 0.2s;
+  letter-spacing: 2px;
+  font-style: normal;
+  padding: 15px 0px 0px 42px;
+  font-family: "Orbitron", sans-serif;
+}
+
+.header__item-link {
+  transition: 5s;
+  color: var(--lightsite-textcolor);
+}
+
+.header__item-link:active {
+  transition: 0.5s;
+  color: var(--site-Maincolor);
+}
+
+/*=============== Stop Watch style ===============*/
+
+.stopWatch__box {
+  width: 600px;
+  height: 300px;
+  border-radius: 40px;
+  transition: 3s ease-out;
+  background-color: #13191c;
+}
+
+.stopWatch__box:hover {
+  transition: 1s;
+  box-shadow: 0px 4px 20px var(--site-Maincolor);
+}
+
+.stopWatch__display {
+  user-select: none;
+  position: relative;
+  top: 60px;
+  text-align: center;
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  font-family: "Orbitron", sans-serif;
+  color: var(--site-Maincolor);
+}
+
+.stopWatch__controls {
+  position: relative;
+  top: 70px;
+  left: 85px;
+}
+
+.stopBtn {
+  border-radius: 30px;
+  padding: 10px 15px 10px 15px;
+}
+
+.startBtn {
+  padding: 40px;
+  margin-left: 20px;
+  border-radius: 1200%;
+}
+
+.resetBtn {
+  margin-left: 20px;
+  border-radius: 30px;
+  padding: 10px 15px 10px 15px;
+}
